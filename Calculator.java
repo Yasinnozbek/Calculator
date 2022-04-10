@@ -26,7 +26,15 @@ public class Calculator {
                 double sayi1 = scanner.nextDouble();
                 double sayi2 = scanner.nextDouble();
                 scanner.nextLine();
-                System.out.println("Sonuç : " + (sayi1 / sayi2) + "\n**********************************");
+                double sonuc;
+                try{
+                    sonuc = (sayi1 / sayi2);
+                    System.out.println("Sonuç : " + sonuc + "\n**********************************");
+                }
+                catch (ArithmeticException e){
+                    System.out.println(e.getMessage());
+                }
+
             }
 
             else if (secim.equals("3")) {
